@@ -400,5 +400,405 @@ void game_structure()
     //home text
     setcolor(WHITE);
     //for blue
+    settextstyle(10, 0, 3);
+    setbkcolor(COLOR(0, 127, 255));
+    outtextxy(392, 390, "HOME");
+    //for yellow
+    setbkcolor(YELLOW);
+    settextstyle(10, 1, 3);
+    outtextxy(470, 385, "HOME");
+    //for green
+    setbkcolor(50829319);
+    settextstyle(10, 2, 3);
+    outtextxy(448, 325, "HOME");
+    //for red
+    setbkcolor(237);
+    settextstyle(10, 3, 3);
+    outtextxy(375, 330, "HOME");
+    //for safe zones
+    //  missing
+    setbkcolor(BLACK);
+    setcolor(WHITE);
+    settextstyle(10, 0, 2);
+    outtextxy(880, 5, "MADE BY THE FINEST");
+    outtextxy(920, 35, " DEVELOPERS(GROUP G)");
+    setfillstyle(SOLID_FILL, COLOR(0, 29, 38));
+    //for dice
+    bar(850, 660, 1190, 710);
+    setcolor(COLOR(0, 118, 151));
+    //this one is for how to play
+    rectangle(1026, 129, 1190, 171);
+    //this one is for about
+    rectangle(1026, 179, 1191, 221);
+    //Also Throw dice coordinates
+    rectangle(850, 660, 1190, 710);
+    setcolor(COLOR(0 ,200, 255));
+    setbkcolor(COLOR(0, 29, 38));
+    settextstyle(10, 0, 5);
+    outtextxy(895, 668, "THROW DICE");
+    //this one is for htp
+    bar(1027, 130, 1190, 170);
+    //if sound possible
+        //missing
+    //for about button
+    bar(1027, 180, 1190, 220);
+    setcolor(COLOR(0, 200, 255));
+    settextstyle(10, 0, 3);
+    outtextxy(1040, 188, "DEVELOPERS");
+    outtextxy(1030, 138, "HOW TO PLAY");
+    setbkcolor(BLACK);
+    //adding safezones
+    safezone(345, 110);
+    safezone(663, 288);
+    safezone(449, 560);
+    safezone(129, 380);
+    if(another_chance == 1)
+    {
+        //setcolor(COLOR(0, 118, 151));
+        setcolor(WHITE);
+        settextstyle(8, 0, 2);
+        outtextxy(873, 450, "you got another chance");
+        outtextxy(873, 500, "to throw a dice");
+    }
+    //for check box
+    if(redflag == 1)
+    {
+        checkbox(1);
+    }
+    else if(greenflag == 1)
+    {
+        checkbox(2);
+    }
+    else if(yellowflag == 1)
+    {
+        checkbox(3);
+    }
+    else if(blueflag == 1)
+    {
+        checkbox(4);
+    }
+    //displaying the runners now
+    if (player_mod == 2)
+    {
+        if(ret_choice_2 == 1)
+        {
+
+            r1.display(1);
+            r2.display(2);
+            r3.display(3);
+            r4.display(4);
+
+            y1.display(1);
+            y2.display(2);
+            y3.display(3);
+            y4.display(4);
+        }
+        else if (ret_choice_2 == 2)
+        {
+            g1.display(1);
+            g2.display(2);
+            g3.display(3);
+            g4.display(4);
+
+            b1.display(1);
+            b2.display(2);
+            b3.display(3);
+            b4.display(4);
+        }
+    }
+    else if (player_mod == 3)
+    {
+        if(choice3_4 == 0)
+        {
+            //means no blue flag
+            g1.display(1);
+            g2.display(2);
+            g3.display(3);
+            g4.display(4);
+
+            r1.display(1);
+            r2.display(2);
+            r3.display(3);
+            r4.display(4);
+
+            y1.display(1);
+            y2.display(2);
+            y3.display(3);
+            y4.display(4);
+        }
+        else if (choice3_3 == 0)
+        {
+            //means no yellow flag
+            g1.display(1);
+            g2.display(2);
+            g3.display(3);
+            g4.display(4);
+
+            r1.display(1);
+            r2.display(2);
+            r3.display(3);
+            r4.display(4);
+
+            b1.display(1);
+            b2.display(2);
+            b3.display(3);
+            b4.display(4);
+        }
+        else if (choice3_2 == 0)
+        {
+            //means no greenflag
+            r1.display(1);
+            r2.display(2);
+            r3.display(3);
+            r4.display(4);
+
+            b1.display(1);
+            b2.display(2);
+            b3.display(3);
+            b4.display(4);
+
+            y1.display(1);
+            y2.display(2);
+            y3.display(3);
+            y4.display(4);
+        }
+        else if (choice3_1 == 0)
+        {
+            //means no redflag
+            g1.display(1);
+            g2.display(2);
+            g3.display(3);
+            g4.display(4);
+
+            b1.display(1);
+            b2.display(2);
+            b3.display(3);
+            b4.display(4);
+
+            y1.display(1);
+            y2.display(2);
+            y3.display(3);
+            y4.display(4);
+        }
+    }
+    else if (player_mod == 4)
+    {
+        g1.display(1);
+        g2.display(2);
+        g3.display(3);
+        g4.display(4);
+
+        r1.display(1);
+        r2.display(2);
+        r3.display(3);
+        r4.display(4);
+
+        b1.display(1);
+        b2.display(2);
+        b3.display(3);
+        b4.display(4);
+
+        y1.display(1);
+        y2.display(2);
+        y3.display(3);
+        y4.display(4);
+    }
+
+    page = 1 - page;
+    //test case
+
+}
+
+
+//functions for the paw team call
+//for green
+void green()
+{
+    //making throw button active
+    int mx, my;
+    while(greenflag == 1 && no_of_turns < 3)
+    {
+        if(ismouseclick(WM_LBUTTONDOWN))
+        {
+            clearmouseclick(WM_LBUTTONDOWN);
+            mx = mousex();
+            my = mousey();
+            if(mx > 849 && my > 659 && mx < 1191 && my < 711)
+            {
+                //setting flag to zero
+                greenflag = 0;
+                dice(2);
+                if((g1.dice_number + dice_return >= 6 && g1.dice_number + dice_return <= 62) ||
+                    (g2.dice_number + dice_return >= 6 && g2.dice_number + dice_return <= 62) ||
+                    (g3.dice_number + dice_return >= 6 && g3.dice_number + dice_return <= 62) ||
+                    (g4.dice_number + dice_return >= 6 && g4.dice_number + dice_return <= 62) )
+                {
+                    greenpaw = 1;
+                }
+                else if(player_mod == 2)
+                {
+                    no_of_turns = 0;
+                    delay(1000);
+                    blueflag = 1;
+                    checkbox(4);
+                    redraw();
+                }
+                else if(player_mod == 3)
+                {
+                    if(choice3_4 == 0)
+                    {
+                        //means no blue flag
+                        no_of_turns = 0;
+                        delay(1000);
+                        yellowflag = 1;
+                        checkbox(3);
+                        redraw();
+                    }
+                    else if (choice3_3 == 0)
+                    {
+                        //means no yellow flag
+                        no_of_turns = 0;
+                        delay(1000);
+                        blueflag = 1;
+                        checkbox(4);
+                        redraw();
+                    }
+                    else if (choice3_1 == 0)
+                    {
+                        //means no redflag
+                        no_of_turns = 0;
+                        delay(1000);
+                        yellowflag = 1;
+                        checkbox(3);
+                        redraw();
+                    }
+
+                }
+                else
+                {
+                    no_of_turns = 0;
+                    delay(1000);
+                    yellowflag = 1;
+                    checkbox(3);
+                    redraw();
+                }
+            }
+            else if(mx > 1027 && my > 180 && mx < 1190 && my < 220)
+            {
+                delevlopers_info();
+                setcurrentwindow(main_window);
+            }
+            else if(mx > 1027 && my > 130 && mx < 1190 && my < 170)
+            {
+                how_play();
+                setcurrentwindow(main_window);
+            }
+        }
+    }
+    //paw selection
+    while(greenpaw == 1)
+    {
+        if(ismouseclick(WM_LBUTTONDOWN))
+        {
+            clearmouseclick(WM_LBUTTONDOWN);
+            mx = mousex();
+            my = mousey();
+            if(mx > g1.x - 18 && my > g1.y - 18 && mx < g1.x + 18 && my < g1.y + 18)
+            {
+                if(g1.flag == 0 && dice_return == 6)
+                {
+                    g1.flag = 1;
+                    greenpaw = 0;
+                }
+                if(g1.flag == 1 && g1.dice_number < 62)
+                {
+                    g1.dice_number += dice_return;
+                    greenpaw = 0;
+                    bite_test('g');
+                }
+            }
+            else if(mx > g2.x - 18 && my > g2.y - 18 && mx < g2.x + 18 && my < g2.y + 18)
+            {
+                if(g2.flag == 0 && dice_return == 6)
+                {
+                    g2.flag = 1;
+                    greenpaw = 0;
+                }
+                if(g2.flag == 1 && g2.dice_number < 62)
+                {
+                    g2.dice_number += dice_return;
+                    greenpaw = 0;
+                    bite_test('g');
+                }
+            }
+            else if(mx > g3.x - 18 && my > g3.y - 18 && mx < g3.x + 18 && my < g3.y + 18)
+            {
+                if(g3.flag == 0 && dice_return == 6)
+                {
+                    g3.flag = 1;
+                    greenpaw = 0;
+                }
+                if(g3.flag == 1 && g3.dice_number < 62)
+                {
+                    g3.dice_number += dice_return;
+                    greenpaw = 0;
+                    bite_test('g');
+                }
+            }
+            else if(mx > g4.x - 18 && my > g4.y - 18 && mx < g4.x + 18 && my < g4.y + 18)
+            {
+                if(g4.flag == 0 && dice_return == 6)
+                {
+                    g4.flag = 1;
+                    greenpaw = 0;
+                }
+                if(g4.flag == 1 && g4.dice_number < 62)
+                {
+                    g4.dice_number += dice_return;
+                    greenpaw = 0;
+                    bite_test('g');
+                }
+            }
+            else if(mx > 1027 && my > 180 && mx < 1190 && my < 220)
+            {
+                delevlopers_info();
+                setcurrentwindow(main_window);
+            }
+            else if(mx > 1027 && my > 130 && mx < 1190 && my < 170)
+            {
+                how_play();
+                setcurrentwindow(main_window);
+            }
+        }
+    }
+
+}
+
+//for red
+void red()
+{
+    //making throw button active
+    int mx, my;
+    while(redflag == 1 && no_of_turns < 3)
+    {
+        if(ismouseclick(WM_LBUTTONDOWN))
+        {
+            clearmouseclick(WM_LBUTTONDOWN);
+            mx = mousex();
+            my = mousey();
+            if(mx > 849 && my > 659 && mx < 1191 && my < 711)
+                {
+                //setting flag to zero
+                redflag = 0;
+                dice(1);
+                if((r1.dice_number + dice_return >= 6 && r1.dice_number + dice_return <= 62) ||
+                    (r2.dice_number + dice_return >= 6 && r2.dice_number + dice_return <= 62) ||
+                    (r3.dice_number + dice_return >= 6 && r3.dice_number + dice_return <= 62) ||
+                    (r4.dice_number + dice_return >= 6 && r4.dice_number + dice_return <= 62) )
+                {
+                    redpaw = 1;
+                }
+                else if(player_mod == 2)
+                {
 
 #endif // added by script
