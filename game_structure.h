@@ -800,5 +800,205 @@ void red()
                 }
                 else if(player_mod == 2)
                 {
+                    no_of_turns = 0;
+                    delay(1000);
+                    yellowflag = 1;
+                    checkbox(3);
+                    redraw();
+                }
+                else if(player_mod == 3)
+                {
+                    if(choice3_4 == 0)
+                    {
+                        //means no blue flag
+                        no_of_turns = 0;
+                        delay(1000);
+                        greenflag = 1;
+                        checkbox(2);
+                        redraw();
+                    }
+                    else if (choice3_3 == 0)
+                    {
+                        //means no yellow flag
+                        no_of_turns = 0;
+                        delay(1000);
+                        greenflag = 1;
+                        checkbox(2);
+                        redraw();
+                    }
+                    else if (choice3_2 == 0)
+                    {
+                        //means no greenflag
+                        no_of_turns = 0;
+                        delay(1000);
+                        yellowflag = 1;
+                        checkbox(3);
+                        redraw();
+                    }
+                }
+                else
+                {
+                    no_of_turns = 0;
+                    delay(1000);
+                    greenflag = 1;
+                    checkbox(2);
+                    redraw();
+                }
+            }
+            else if(mx > 1027 && my > 180 && mx < 1190 && my < 220)
+            {
+                delevlopers_info();
+                setcurrentwindow(main_window);
+            }
+            else if(mx > 1027 && my > 130 && mx < 1190 && my < 170)
+            {
+                how_play();
+                setcurrentwindow(main_window);
+            }
+        }
+    }
+    //paw selection
+    while(redpaw == 1)
+    {
+        if(ismouseclick(WM_LBUTTONDOWN))
+        {
+            clearmouseclick(WM_LBUTTONDOWN);
+            mx = mousex();
+            my = mousey();
+            if(mx > r1.x - 18 && my > r1.y - 18 && mx < r1.x + 18 && my < r1.y + 18)
+            {
+                if(r1.flag == 0 && dice_return == 6)
+                {
+                    r1.flag = 1;
+                    redpaw = 0;
+                }
+                if(r1.flag == 1 && r1.dice_number < 62)
+                {
+                    r1.dice_number += dice_return;
+                    redpaw = 0;
+                    bite_test('r');
+                }
+            }
+            else if(mx > r2.x - 18 && my > r2.y - 18 && mx < r2.x + 18 && my < r2.y + 18)
+            {
+                if(r2.flag == 0 && dice_return == 6)
+                {
+                    r2.flag = 1;
+                    redpaw = 0;
+                }
+                if(r2.flag == 1 && r2.dice_number < 62)
+                {
+                    r2.dice_number += dice_return;
+                    redpaw = 0;
+                    bite_test('r');
+                }
+            }
+            else if(mx > r3.x - 18 && my > r3.y - 18 && mx < r3.x + 18 && my < r3.y + 18)
+            {
+                if(r3.flag == 0 && dice_return == 6)
+                {
+                    r3.flag = 1;
+                    redpaw = 0;
+                }
+                if(r3.flag == 1 && r3.dice_number < 62)
+                {
+                    r3.dice_number += dice_return;
+                    redpaw = 0;
+                    bite_test('r');
+                }
+            }
+            else if(mx > r4.x - 18 && my > r4.y - 18 && mx < r4.x + 18 && my < r4.y + 18)
+            {
+                if(r4.flag == 0 && dice_return == 6)
+                {
+                    r4.flag = 1;
+                    redpaw = 0;
+                }
+                if(r4.flag == 1 && r4.dice_number < 62)
+                {
+                    r4.dice_number += dice_return;
+                    redpaw = 0;
+                    bite_test('r');
+                }
+            }
+            else if(mx > 1027 && my > 180 && mx < 1190 && my < 220)
+            {
+                delevlopers_info();
+                setcurrentwindow(main_window);
+            }
+            else if(mx > 1027 && my > 130 && mx < 1190 && my < 170)
+            {
+                how_play();
+                setcurrentwindow(main_window);
+            }
+        }
+    }
+}
+
+//for blue
+void blue()
+{
+    //making throw button active
+    int mx, my;
+    while(blueflag == 1 && no_of_turns < 3)
+    {
+        if(ismouseclick(WM_LBUTTONDOWN))
+        {
+            clearmouseclick(WM_LBUTTONDOWN);
+            mx = mousex();
+            my = mousey();
+            if(mx > 849 && my > 659 && mx < 1191 && my < 711)
+            {
+                //setting flag to zero
+                blueflag = 0;
+                dice(4);
+                if((b1.dice_number + dice_return >= 6 && b1.dice_number + dice_return <= 62) ||
+                    (b2.dice_number + dice_return >= 6 && b2.dice_number + dice_return <= 62) ||
+                    (b3.dice_number + dice_return >= 6 && b3.dice_number + dice_return <= 62) ||
+                    (b4.dice_number + dice_return >= 6 && b4.dice_number + dice_return <= 62) )
+                {
+                    bluepaw = 1;
+                }
+                else if(player_mod == 2)
+                {
+                    no_of_turns = 0;
+                    delay(1000);
+                    greenflag = 1;
+                    checkbox(2);
+                    redraw();
+                }
+                else if(player_mod == 3)
+                {
+                    if (choice3_3 == 0)
+                    {
+                        //means no yellow flag
+                        no_of_turns = 0;
+                        delay(1000);
+                        redflag = 1;
+                        checkbox(1);
+                        redraw();
+                    }
+                    else if (choice3_2 == 0)
+                    {
+                        //means no greenflag
+                        no_of_turns = 0;
+                        delay(1000);
+                        redflag = 1;
+                        checkbox(1);
+                        redraw();
+                    }
+                    else if (choice3_1 == 0)
+                    {
+                        //means no redflag
+                        no_of_turns = 0;
+                        delay(1000);
+                        greenflag = 1;
+                        checkbox(2);
+                        redraw();
+                    }
+                }
+                else
+                {
+                    no_of_turns = 0;
 
 #endif // added by script
