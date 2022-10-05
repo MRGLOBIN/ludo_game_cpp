@@ -1000,5 +1000,205 @@ void blue()
                 else
                 {
                     no_of_turns = 0;
+                    delay(1000);
+                    redflag = 1;
+                    checkbox(1);
+                    redraw();
+                }
+            }
+            else if(mx > 1027 && my > 180 && mx < 1190 && my < 220)
+            {
+                delevlopers_info();
+                setcurrentwindow(main_window);
+            }
+        }
+    }
+    //paw selection
+    while(bluepaw == 1)
+    {
+        if(ismouseclick(WM_LBUTTONDOWN))
+        {
+            clearmouseclick(WM_LBUTTONDOWN);
+            mx = mousex();
+            my = mousey();
+            if(mx > b1.x - 18 && my > b1.y - 18 && mx < b1.x + 18 && my < b1.y + 18)
+            {
+                if(b1.flag == 0 && dice_return == 6)
+                {
+                    b1.flag = 1;
+                    bluepaw = 0;
+                }
+                if(b1.flag == 1 && b1.dice_number < 62)
+                {
+                    b1.dice_number += dice_return;
+                    bluepaw = 0;
+                    bite_test('b');
+                }
+            }
+            else if(mx > b2.x - 18 && my > b2.y - 18 && mx < b2.x + 18 && my < b2.y + 18)
+            {
+                if(b2.flag == 0 && dice_return == 6)
+                {
+                    b2.flag = 1;
+                    bluepaw = 0;
+                }
+                if(b2.flag == 1 && b2.dice_number < 62)
+                {
+                    b2.dice_number += dice_return;
+                    bluepaw = 0;
+                    bite_test('b');
+                }
+            }
+            else if(mx > b3.x - 18 && my > b3.y - 18 && mx < b3.x + 18 && my < b3.y + 18)
+            {
+                if(b3.flag == 0 && dice_return == 6)
+                {
+                    b3.flag = 1;
+                    bluepaw = 0;
+                }
+                if(b3.flag == 1 && b3.dice_number < 62)
+                {
+                    b3.dice_number += dice_return;
+                    bluepaw = 0;
+                    bite_test('b');
+                }
+            }
+            else if(mx > b4.x - 18 && my > b4.y - 18 && mx < b4.x + 18 && my < b4.y + 18)
+            {
+                if(b4.flag == 0 && dice_return == 6)
+                {
+                    b4.flag = 1;
+                    bluepaw = 0;
+                }
+                if(b4.flag == 1 && b4.dice_number < 62)
+                {
+                    b4.dice_number += dice_return;
+                    bluepaw = 0;
+                    bite_test('b');
+                }
+            }
+            else if(mx > 1027 && my > 180 && mx < 1190 && my < 220)
+            {
+                delevlopers_info();
+                setcurrentwindow(main_window);
+            }
+            else if(mx > 1027 && my > 130 && mx < 1190 && my < 170)
+            {
+                how_play();
+                setcurrentwindow(main_window);
+            }
+        }
+    }
+}
+
+//for yellow
+void yellow()
+{
+    //making throw button active
+    int mx, my;
+    while(yellowflag == 1 && no_of_turns < 3)
+    {
+        if(ismouseclick(WM_LBUTTONDOWN))
+        {
+            clearmouseclick(WM_LBUTTONDOWN);
+            mx = mousex();
+            my = mousey();
+            if(mx > 849 && my > 659 && mx < 1191 && my < 711)
+            {
+                //setting flag to zero
+                yellowflag = 0;
+                dice(3);
+                if((y1.dice_number + dice_return >= 6 && y1.dice_number + dice_return <= 62) ||
+                    (y2.dice_number + dice_return >= 6 && y2.dice_number + dice_return <= 62) ||
+                    (y3.dice_number + dice_return >= 6 && y3.dice_number + dice_return <= 62) ||
+                    (y4.dice_number + dice_return >= 6 && y4.dice_number + dice_return <= 62) )
+                {
+                    yellowpaw = 1;
+                }
+                else if(player_mod == 2)
+                {
+                    no_of_turns = 0;
+                    delay(1000);
+                    redflag = 1;
+                    checkbox(1);
+                    redraw();
+                }
+                else if(player_mod == 3)
+                {
+                    if(choice3_4 == 0)
+                    {
+                        //means no blue flag
+                        no_of_turns = 0;
+                        delay(1000);
+                        redflag = 1;
+                        checkbox(1);
+                        redraw();
+                    }
+                    else if (choice3_2 == 0)
+                    {
+                        //means no greenflag
+                        no_of_turns = 0;
+                        delay(1000);
+                        blueflag = 1;
+                        checkbox(4);
+                        redraw();
+                    }
+                    else if (choice3_1 == 0)
+                    {
+                        //means no redflag
+                        no_of_turns = 0;
+                        delay(1000);
+                        blueflag = 1;
+                        checkbox(4);
+                        redraw();
+                    }
+                }
+                else
+                {
+                    no_of_turns = 0;
+                    delay(1000);
+                    blueflag = 1;
+                    checkbox(4);
+                    redraw();
+                }
+            }
+            else if(mx > 1027 && my > 180 && mx < 1190 && my < 220)
+            {
+                delevlopers_info();
+                setcurrentwindow(main_window);
+            }
+            else if(mx > 1027 && my > 130 && mx < 1190 && my < 170)
+            {
+                how_play();
+                setcurrentwindow(main_window);
+            }
+        }
+    }
+    //paw selection
+    while(yellowpaw == 1)
+    {
+        if(ismouseclick(WM_LBUTTONDOWN))
+        {
+            clearmouseclick(WM_LBUTTONDOWN);
+            mx = mousex();
+            my = mousey();
+            if(mx > y1.x - 18 && my > y1.y - 18 && mx < y1.x + 18 && my < y1.y + 18)
+            {
+                if(y1.flag == 0 && dice_return == 6)
+                {
+                    y1.flag = 1;
+                    yellowpaw = 0;
+                }
+                if(y1.flag == 1 && y1.dice_number < 62)
+                {
+                    y1.dice_number += dice_return;
+                    yellowpaw = 0;
+                    bite_test('y');
+                }
+            }
+            else if(mx > y2.x - 18 && my > y2.y - 18 && mx < y2.x + 18 && my < y2.y + 18)
+            {
+                if(y2.flag == 0 && dice_return == 6)
+                {
 
 #endif // added by script
