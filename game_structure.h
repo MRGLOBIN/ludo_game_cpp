@@ -1600,5 +1600,205 @@ void bite_test(char paw_val)
                 check_winner_result('g');
             }
             else if (ret_choice_3 == 2)
+            {
+                //means no yellow flag
+                if(dice_return != 6 && no_of_turns < 3)
+                {
+                    no_of_turns = 0;
+                    blueflag = 1;
+                    checkbox(4);
+                }
+                //special case if user got 3 times 6
+                else if(no_of_turns == 3)
+                {
+                    no_of_turns = 0;
+                    blueflag = 1;
+                    checkbox(4);
+                }
+                else
+                {
+                    greenflag = 1;
+                    another_chance = 1;
+                    checkbox(2);
+                }
+                check_winner_result('g');
+            }
+            else if (ret_choice_3 == 5)
+            {
+                //means no redflag
+                if(dice_return != 6 && no_of_turns < 3)
+                {
+                    no_of_turns = 0;
+                    yellowflag = 1;
+                    checkbox(3);
+                }
+                //special case if user got 3 times 6
+                else if(no_of_turns == 3)
+                {
+                    no_of_turns = 0;
+                    yellowflag = 1;
+                    checkbox(3);
+                }
+                else
+                {
+                    greenflag = 1;
+                    another_chance = 1;
+                    checkbox(2);
+                }
+                check_winner_result('g');
+            }
+        }
+        else
+        {
+            if(dice_return != 6 && no_of_turns < 3)
+            {
+                no_of_turns = 0;
+                yellowflag = 1;
+                checkbox(3);
+            }
+            //special case if user got 3 times 6
+            else if(no_of_turns == 3)
+            {
+                no_of_turns = 0;
+                yellowflag = 1;
+                checkbox(3);
+            }
+            else
+            {
+                greenflag = 1;
+                another_chance = 1;
+                checkbox(2);
+            }
+            check_winner_result('g');
+        }
+    }
+
+
+
+    else if(paw_val == 'y')
+    {
+        if((y1.dice_number-13 == b1.dice_number || y2.dice_number-13 == b1.dice_number ||
+            y3.dice_number-13 == b1.dice_number || y4.dice_number-13 == b1.dice_number ) &&
+            (b1.dice_number != 0 && b1.dice_number != 6 && b1.dice_number != 19 && b1.dice_number != 27 && b1.dice_number != 32 &&
+             b1.dice_number != 14 && b1.dice_number != 40 && b1.dice_number != 45 && b1.dice_number != 53))
+        {
+            bite(13, 3);
+        }
+        else if((y1.dice_number-13 == b2.dice_number || y2.dice_number-13 == b2.dice_number ||
+            y3.dice_number-13 == b2.dice_number || y4.dice_number-13 == b2.dice_number ) &&
+            (b2.dice_number != 0 && b2.dice_number != 6 && b2.dice_number != 19 && b2.dice_number != 27 && b2.dice_number != 32 &&
+             b2.dice_number != 14 && b2.dice_number != 40 && b2.dice_number != 45 && b2.dice_number != 53))
+        {
+            bite(14, 3);
+        }
+        else if((y1.dice_number-13 == b3.dice_number || y2.dice_number-13 == b3.dice_number ||
+            y3.dice_number-13 == b3.dice_number || y4.dice_number-13 == b3.dice_number ) &&
+            (b3.dice_number != 0 && b3.dice_number != 6 && b3.dice_number != 19 && b3.dice_number != 27 && b3.dice_number != 32 &&
+             b3.dice_number != 14 && b3.dice_number != 40 && b3.dice_number != 45 && b3.dice_number != 53))
+        {
+            bite(15, 3);
+        }
+        else if((y1.dice_number-13 == b4.dice_number || y2.dice_number-13 == b4.dice_number ||
+            y3.dice_number-13 == b4.dice_number || y4.dice_number-13 == b4.dice_number ) &&
+            (b4.dice_number != 0 && b4.dice_number != 6 && b4.dice_number != 19 && b4.dice_number != 27 && b4.dice_number != 32 &&
+             b4.dice_number != 14 && b4.dice_number != 40 && b4.dice_number != 45 && b4.dice_number != 53))
+        {
+            bite(16, 3);
+        }
+        else if((y1.dice_number-26 == r1.dice_number || y2.dice_number-26 == r1.dice_number ||
+            y3.dice_number-26 == r1.dice_number || y4.dice_number-26 == r1.dice_number ) &&
+            (r1.dice_number != 0 && r1.dice_number != 6 && r1.dice_number != 19 && r1.dice_number != 27 && r1.dice_number != 32 &&
+             r1.dice_number != 14 && r1.dice_number != 40 && r1.dice_number != 45 && r1.dice_number != 53))
+        {
+            bite(1, 3);
+        }
+        else if((y1.dice_number-26 == r2.dice_number || y2.dice_number-26 == r2.dice_number ||
+            y3.dice_number-26 == r2.dice_number || y4.dice_number-26 == r2.dice_number ) &&
+            (r2.dice_number != 0 && r2.dice_number != 6 && r2.dice_number != 19 && r2.dice_number != 27 && r2.dice_number != 32 &&
+             r2.dice_number != 14 && r2.dice_number != 40 && r2.dice_number != 45 && r2.dice_number != 53))
+        {
+            bite(2, 3);
+        }
+        else if((y1.dice_number-26 == r3.dice_number || y2.dice_number-26 == r3.dice_number ||
+            y3.dice_number-26 == r3.dice_number || y4.dice_number-26 == r3.dice_number ) &&
+            (r3.dice_number != 0 && r3.dice_number != 6 && r3.dice_number != 19 && r3.dice_number != 27 && r3.dice_number != 32 &&
+             r3.dice_number != 14 && r3.dice_number != 40 && r3.dice_number != 45 && r3.dice_number != 53))
+        {
+            bite(3, 3);
+        }
+        else if((y1.dice_number-26 == r4.dice_number || y2.dice_number-26 == r4.dice_number ||
+            y3.dice_number-26 == r4.dice_number || y4.dice_number-26 == r4.dice_number ) &&
+            (r4.dice_number != 0 && r4.dice_number != 6 && r4.dice_number != 19 && r4.dice_number != 27 && r4.dice_number != 32 &&
+             r4.dice_number != 14 && r4.dice_number != 40 && r4.dice_number != 45 && r4.dice_number != 53))
+        {
+            bite(4, 3);
+        }
+        else if((y1.dice_number  == g1.dice_number-13 || y2.dice_number  == g1.dice_number-13 ||
+            y3.dice_number == g1.dice_number-13 || y4.dice_number  == g1.dice_number-13 ) &&
+            (g1.dice_number != 0 && g1.dice_number != 6 && g1.dice_number != 19 && g1.dice_number != 27 && g1.dice_number != 32 &&
+             g1.dice_number != 14 && g1.dice_number != 40 && g1.dice_number != 45 && g1.dice_number != 53))
+        {
+            bite(5, 3);
+        }
+        else if((y1.dice_number  == g2.dice_number-13 || y2.dice_number  == g2.dice_number-13 ||
+            y3.dice_number == g2.dice_number -13|| y4.dice_number  == g2.dice_number -13) &&
+            (g2.dice_number != 0 && g2.dice_number != 6 && g2.dice_number != 19 && g2.dice_number != 27 && g2.dice_number != 32 &&
+             g2.dice_number != 14 && g2.dice_number != 40 && g2.dice_number != 45 && g2.dice_number != 53))
+        {
+            bite(6, 3);
+        }
+        else if((y1.dice_number  == g3.dice_number-13 || y2.dice_number  == g3.dice_number-13 ||
+            y3.dice_number  == g3.dice_number -13|| y4.dice_number  == g3.dice_number-13 ) &&
+            (g3.dice_number != 0 && g3.dice_number != 6 && g3.dice_number != 19 && g3.dice_number != 27 && g3.dice_number != 32 &&
+             g3.dice_number != 14 && g3.dice_number != 40 && g3.dice_number != 45 && g3.dice_number != 53))
+        {
+            bite(7, 3);
+        }
+        else if((y1.dice_number  == g4.dice_number-13 || y2.dice_number  == g4.dice_number-13 ||
+            y3.dice_number  == g4.dice_number-13 || y4.dice_number  == g4.dice_number-13 ) &&
+            (g4.dice_number != 0 && g4.dice_number != 6 && g4.dice_number != 19 && g4.dice_number != 27 && g4.dice_number != 32 &&
+             g4.dice_number != 14 && g4.dice_number != 40 && g4.dice_number != 45 && g4.dice_number != 53))
+        {
+            bite(8, 3);
+        }
+        else if(player_mod == 2)
+        {
+            if(dice_return != 6 && no_of_turns < 3)
+            {
+                no_of_turns = 0;
+                redflag = 1;
+                checkbox(1);
+            }
+            //special case if user got 3 times 6
+            else if(no_of_turns == 3)
+            {
+                no_of_turns = 0;
+                redflag = 1;
+                checkbox(1);
+            }
+            else
+            {
+                yellowflag = 1;
+                another_chance = 1;
+                checkbox(3);
+            }
+            check_winner_result('y');
+        }
+        else if(player_mod == 3)
+        {
+            if(choice3_4 == 0)
+            {
+                //means no blueflag
+                if(dice_return != 6 && no_of_turns < 3)
+                {
+                    no_of_turns = 0;
+                    redflag = 1;
+                    checkbox(1);
+                }
+                //special case if user got 3 times 6
+                else if(no_of_turns == 3)
+                {
+                    no_of_turns = 0;
+                    redflag = 1;
 
 #endif // added by script
