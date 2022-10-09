@@ -2000,5 +2000,405 @@ void bite_test(char paw_val)
             if (ret_choice_3 == 2)
             {
                 //means no yellow flag
+                if(dice_return != 6 && no_of_turns < 3)
+                {
+                    no_of_turns = 0;
+                    redflag = 1;
+                    checkbox(1);
+                }
+                //special case if user got 3 times 6
+                else if(no_of_turns == 3)
+                {
+                    no_of_turns = 0;
+                    redflag = 1;
+                    checkbox(1);
+                }
+                else
+                {
+                    blueflag = 1;
+                    another_chance = 1;
+                    checkbox(4);
+                }
+                check_winner_result('b');
+            }
+            else if (ret_choice_3 == 4)
+            {
+                //means no greenflag
+                if(dice_return != 6 && no_of_turns < 3)
+                {
+                    no_of_turns = 0;
+                    redflag = 1;
+                    checkbox(1);
+                }
+                //special case if user got 3 times 6
+                else if(no_of_turns == 3)
+                {
+                    no_of_turns = 0;
+                    redflag = 1;
+                    checkbox(1);
+                }
+                else
+                {
+                    blueflag = 1;
+                    another_chance = 1;
+                    checkbox(4);
+                }
+                check_winner_result('b');
+            }
+            else if (ret_choice_3 == 5)
+            {
+                //means no redflag
+                if(dice_return != 6 && no_of_turns < 3)
+                {
+                    no_of_turns = 0;
+                    greenflag = 1;
+                    checkbox(2);
+                }
+                //special case if user got 3 times 6
+                else if(no_of_turns == 3)
+                {
+                    no_of_turns = 0;
+                    greenflag = 1;
+                    checkbox(2);
+                }
+                else
+                {
+                    blueflag = 1;
+                    another_chance = 1;
+                    checkbox(4);
+                }
+                check_winner_result('b');
+            }
+        }
+        else
+        {
+            if(dice_return != 6 && no_of_turns < 3)
+            {
+                no_of_turns = 0;
+                redflag = 1;
+                checkbox(1);
+            }
+            //special case if user got 3 times 6
+            else if(no_of_turns == 3)
+            {
+                no_of_turns = 0;
+                redflag = 1;
+                checkbox(1);
+            }
+            else
+            {
+               blueflag = 1;
+               another_chance = 1;
+               checkbox(4);
+            }
+            check_winner_result('b');
+        }
+
+    }
+}
+
+int bite(int bite, int turn)
+{
+    //don't pass flag dirst
+    //now start bite
+    if(bite == 1)
+    {
+        if(r1.dice_number < 57)
+        {
+            r1.flag = 0;
+            for(r1.dice_number; r1.dice_number > 0; r1.dice_number--)
+            {
+                if(r1.dice_number == 6)
+                {
+                    another_chance = 1;
+                }
+                redraw();
+                delay(10);
+            }
+        }
+        r1.dice_number = 0;
+    }
+    else if(bite == 2)
+    {
+        if(r2.dice_number < 57)
+        {
+            for(r2.dice_number; r2.dice_number > 0; r2.dice_number--)
+            {
+                if(r2.dice_number == 6)
+                {
+                    another_chance = 1;
+                }
+                redraw();
+                delay(10);
+            }
+        }
+    }
+    else if(bite == 3)
+    {
+        if(r3.dice_number < 57)
+        {
+            for(r3.dice_number; r3.dice_number > 0; r3.dice_number--)
+            {
+                if(r3.dice_number == 6)
+                {
+                    another_chance = 1;
+                }
+                redraw();
+                delay(10);
+            }
+        }
+    }
+    else if(bite == 4)
+    {
+        if(r4.dice_number < 57)
+        {
+            for(r4.dice_number; r4.dice_number > 0; r4.dice_number--)
+            {
+                if(r4.dice_number == 6)
+                {
+                    another_chance = 1;
+                }
+                redraw();
+                delay(10);
+            }
+        }
+    }
+    else if(bite == 5)
+    {
+        if(g1.dice_number < 57)
+        {
+            for(g1.dice_number; g1.dice_number > 0; g1.dice_number--)
+            {
+                if(g1.dice_number == 6)
+                {
+                    another_chance = 1;
+                }
+                redraw();
+                delay(10);
+            }
+        }
+    }
+    else if(bite == 6)
+    {
+        if(g2.dice_number < 57)
+        {
+            for(g2.dice_number; g2.dice_number > 0; g2.dice_number--)
+            {
+                if(g2.dice_number == 6)
+                {
+                    another_chance = 1;
+                }
+                redraw();
+                delay(10);
+            }
+        }
+    }
+    else if(bite == 7)
+    {
+        if(g3.dice_number < 57)
+        {
+            for(g3.dice_number; g3.dice_number > 0; g3.dice_number--)
+            {
+                if(g3.dice_number == 6)
+                {
+                    another_chance = 1;
+                }
+                redraw();
+                delay(10);
+            }
+        }
+    }
+    else if(bite == 8)
+    {
+        if(g4.dice_number < 57)
+        {
+            for(g4.dice_number; g4.dice_number > 0; g4.dice_number--)
+            {
+                if(g4.dice_number == 6)
+                {
+                    another_chance = 1;
+                }
+                redraw();
+                delay(10);
+            }
+        }
+    }
+    else if(bite == 9)
+    {
+        if(y1.dice_number < 57)
+        {
+            for(y1.dice_number; y1.dice_number > 0; y1.dice_number--)
+            {
+                if(y1.dice_number == 6)
+                {
+                    another_chance = 1;
+                }
+                redraw();
+                delay(10);
+            }
+        }
+    }
+    else if(bite == 10)
+    {
+        if(y2.dice_number < 57)
+        {
+            for(y2.dice_number; y2.dice_number > 0; y2.dice_number--)
+            {
+                if(y2.dice_number == 6)
+                {
+                    another_chance = 1;
+                }
+                redraw();
+                delay(10);
+            }
+        }
+    }
+    else if(bite == 11)
+    {
+        if(y3.dice_number < 57)
+        {
+            for(y3.dice_number; y3.dice_number > 0; y3.dice_number--)
+            {
+                if(y3.dice_number == 6)
+                {
+                    another_chance = 1;
+                }
+                redraw();
+                delay(10);
+            }
+        }
+    }
+    else if(bite == 12)
+    {
+        if(y4.dice_number < 57)
+        {
+            for(y4.dice_number; y4.dice_number > 0; y4.dice_number--)
+            {
+                if(y4.dice_number == 6)
+                {
+                    another_chance = 1;
+                }
+                redraw();
+                delay(10);
+            }
+        }
+    }
+    else if(bite == 13)
+    {
+        if(b1.dice_number < 57)
+        {
+            for(b1.dice_number; b1.dice_number > 0; b1.dice_number--)
+            {
+                if(b1.dice_number == 6)
+                {
+                    another_chance = 1;
+                }
+                redraw();
+                delay(10);
+            }
+        }
+    }
+    else if(bite == 14)
+    {
+        if(b2.dice_number < 57)
+        {
+            for(b2.dice_number; b2.dice_number > 0; b2.dice_number--)
+            {
+                if(b2.dice_number == 6)
+                {
+                    another_chance = 1;
+                }
+                redraw();
+                delay(10);
+            }
+        }
+    }
+    else if(bite == 15)
+    {
+        if(b3.dice_number < 57)
+        {
+            for(b3.dice_number; b3.dice_number > 0; b3.dice_number--)
+            {
+                if(b3.dice_number == 6)
+                {
+                    another_chance = 1;
+                }
+                redraw();
+                delay(10);
+            }
+        }
+    }
+    else if(bite == 16)
+    {
+        if(b4.dice_number < 57)
+        {
+            for(b4.dice_number; b4.dice_number > 0; b4.dice_number--)
+            {
+                if(b4.dice_number == 6)
+                {
+                    another_chance = 1;
+                }
+                redraw();
+                delay(10);
+            }
+        }
+    }
+    if(turn == 1)
+    {
+        redflag = 1;
+    }
+    else if(turn == 2)
+    {
+        greenflag == 1;
+    }
+    else if(turn == 3)
+    {
+        yellowflag = 1;
+    }
+    else if(turn == 4)
+    {
+        blueflag = 1;
+    }
+    redraw();
+}
+
+void check_winner_result(char runner)
+{
+    int winner = 0, paw = 0, paw_2 = 0;
+    if(runner == 'r')
+    {
+        if(r1.dice_number == 62 && r2.dice_number == 62 && r3.dice_number == 62 && r4.dice_number == 62)
+        {
+            if(winner == 0)
+            {
+                winner = 1;
+            }
+            else if(winner != 0 && paw == 0)
+            {
+                runner = 1;
+            }
+            else if(winner != 0 && paw != 0 && paw_2 == 0)
+            {
+                paw_2 = 1;
+            }
+        }
+    }
+    else if(runner == 'g')
+    {
+        if(g1.dice_number == 62 && g2.dice_number == 62 && g3.dice_number == 62 && g4.dice_number == 62)
+        {
+            if(winner == 0)
+            {
+                winner = 1;
+            }
+            else if(winner != 0 && paw == 0)
+            {
+                runner = 1;
+            }
+            else if(winner != 0 && paw != 0 && paw_2 == 0)
+            {
+                paw_2 = 1;
+            }
+        }
 
 #endif // added by script
