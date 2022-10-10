@@ -2400,5 +2400,51 @@ void check_winner_result(char runner)
                 paw_2 = 1;
             }
         }
+    }
+    else if(runner == 'y')
+    {
+        if(y1.dice_number == 62 && y2.dice_number == 62 && y3.dice_number == 62 && y4.dice_number == 62)
+        {
+            if(winner == 0)
+            {
+                winner = 1;
+            }
+            else if(winner != 0 && paw == 0)
+            {
+                runner = 1;
+            }
+            else if(winner != 0 && paw != 0 && paw_2 == 0)
+            {
+                paw_2 = 1;
+            }
+        }
+    }
+    else if(runner == 'b')
+    {
+        if(b1.dice_number == 62 && b2.dice_number == 62 && b3.dice_number == 62 && b4.dice_number == 62)
+        {
+            if(winner == 0)
+            {
+                winner = 1;
+            }
+            else if(winner != 0 && paw == 0)
+            {
+                runner = 1;
+            }
+            else if(winner != 0 && paw != 0 && paw_2 == 0)
+            {
+                paw_2 = 1;
+            }
+        }
+    }
+//    if(winner != 0 && paw != 0&& paw_2 != 0)
+//    {
+//
+//    }
+}
+
+#endif // GAME_STRUCTURE_H_INCLUDED
+
+
 
 #endif // added by script
