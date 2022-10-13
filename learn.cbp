@@ -28,3 +28,13 @@
 				</Linker>
 			</Target>
 		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="game_starts.h" />
+		<Unit filename="game_structure.h" />
+		<Unit filename="global_var_&amp;&amp;_fun_declaration.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="menu_options.h" />
+		<Unit filename="paw_structure.h" />
