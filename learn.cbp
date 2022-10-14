@@ -38,3 +38,9 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="menu_options.h" />
 		<Unit filename="paw_structure.h" />
+		<Unit filename="window_screen_start.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

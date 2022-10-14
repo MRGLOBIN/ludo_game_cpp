@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1667930407 source:e:\workspace\cpp\graphics.h\learn\main.cpp
+	<iostream>
+	<graphics.h>
+
+1672413563 source:e:\workspace\cpp\grap_cpp\learn\main.cpp
+	<graphics.h>
+	<iostream>
+	<cstdlib>
+	<time.h>
