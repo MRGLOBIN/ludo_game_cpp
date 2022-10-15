@@ -8,3 +8,13 @@
 	<iostream>
 	<cstdlib>
 	<time.h>
+	"global_var_&&_fun_declaration.h"
+	"window_screen_start.h"
+	"menu_options.h"
+	"paw_structure.h"
+	"game_structure.h"
+	"game_starts.h"
+
+1672413399 e:\workspace\cpp\grap_cpp\learn\window_screen_start.h
+
+1671174022 e:\workspace\cpp\grap_cpp\learn\menu_options.h
