@@ -113,4 +113,117 @@ int start_interface()
             settextstyle(6, 0, 4);
             outtextxy(25, 185, "Welcome to LUDO Game");
             setcolor(COLOR(150, 200, 180));
+            settextstyle(10, 0, 3);
+            outtextxy(110, 225, "Created by Group G");
+            setcolor(WHITE);
+            line(550, 80, 550, 320);
+            setcolor(BLUE);
+            settextstyle(10, 0, 4);
+            outtextxy(580, 100,"Main Menu");
+            setcolor(DARKGRAY);
+            settextstyle(10, 0, 3);
+            outtextxy(620, 150, "2 Players");
+            outtextxy(620, 185, "3 Players");
+            outtextxy(620, 215, "4 Players");
+            //now lets set the pointer to the selections
+            if (player == 4)
+            {
+                outtextxy(590, 215, ">");
+            }
+            else if (player == 3)
+            {
+                outtextxy(590, 185, ">");
+            }
+            else if (player == 2)
+            {
+                outtextxy(590, 150, ">");
+            }
+            //player 2 rectangle coordinates(620, 150, 750, 170)
+            //player 3 rectangle coordinates(620, 185, 750, 205)
+            //player 4 rectangle coordinates(620, 215, 750, 235)
+            //now lets start some animation effects
+
+            if( mousex() >= 620 && mousey() >= 150 && mousex() <= 750 && mousey() <= 170)
+            {
+                setbkcolor(LIGHTGRAY);
+                settextstyle(10, 0, 3);
+                outtextxy(620, 150, "2 Players");
+
+            }
+            else
+            {
+                setcolor(DARKGRAY);
+                setbkcolor(BLACK);
+                settextstyle(10, 0, 3);
+                outtextxy(620, 150, "2 Players");
+            }
+             if( mousex() >= 620 && mousey() >= 185 && mousex() <= 750 && mousey() <= 205)
+            {
+                setbkcolor(LIGHTGRAY);
+                settextstyle(10, 0, 3);
+                outtextxy(620, 185, "3 Players");
+            }
+            else
+            {
+                setcolor(DARKGRAY);
+                setbkcolor(BLACK);
+                settextstyle(10, 0, 3);
+                outtextxy(620, 185, "3 Players");
+            }
+             if( mousex() >= 620 && mousey() >= 215 && mousex() <= 750 && mousey() <= 235)
+            {
+                setbkcolor(LIGHTGRAY);
+                settextstyle(10, 0, 3);
+                outtextxy(620, 215, "4 Players");
+                setbkcolor(BLACK);
+            }
+            else
+            {
+                setcolor(DARKGRAY);
+                setbkcolor(BLACK);
+                settextstyle(10, 0, 3);
+                outtextxy(620, 215, "4 Players");
+            }
+            if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 620 && mousey() >= 150 && mousex() <= 750 && mousey() <= 170)
+                {
+                    player = 2;
+                }
+            else if (ismouseclick(WM_LBUTTONDOWN) && mousex() >= 620 && mousey() >= 185 && mousex() <= 750 && mousey() <= 205)
+            {
+                player = 3;
+            }
+            else if (ismouseclick(WM_LBUTTONDOWN) && mousex() >= 620 && mousey() >= 215 && mousex() <= 750 && mousey() <= 235)
+            {
+                player = 4;
+            }
+            if (player == 4)
+            {
+                setcolor(COLOR(0, 200, 255));
+                settextstyle(1, 0, 1);
+                outtextxy(695, 370, "START");
+            }
+            else if (player == 3 || player == 2)
+            {
+                setcolor(COLOR(0, 200, 255));
+                settextstyle(1, 0, 1);
+                outtextxy(695, 370, "NEXT");
+            }
+            //here the coordinates for start and next button are (693, 368, 786, 386)
+            if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 693 && mousey() >= 368 && mousex() <= 786 && mousey() <= 386)
+            {
+                mouse_bool_1 = FALSE;
+            }
+            clearmouseclick(WM_LBUTTONDOWN);
+            delay(50);
+            swapbuffers();
+        }
+        closegraph();
+        return player;
+}
+
+
+int player_win2()
+{
+    //here is start for the 2 player menu
+    initwindow_800x400();
 #endif // MENU_OPTIONS_H_INCLUDED
