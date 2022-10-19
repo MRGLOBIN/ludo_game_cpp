@@ -226,4 +226,117 @@ int player_win2()
 {
     //here is start for the 2 player menu
     initwindow_800x400();
+    int choice = 0;
+    while(TRUE)
+    {
+        cleardevice();
+        setcolor(BLUE);
+        settextstyle(10, 4, 0);
+        outtextxy(550, 100, "Select your choice!");
+        //well setting the red paw
+        //x = 170, y = 200, color = red
+        paw_start_interface(170, 200, RED);
+        //the versus text
+        outtextxy(255, 215, "vs");
+        //here i set the yellow paw
+        //x = 295, y = 200, color = yellow
+        paw_start_interface(295, 200, YELLOW);
+        //here comes the line separator
+        setlinestyle(SOLID_LINE, 1, 3);
+        line(390, 120, 390, 290);
+        //now here comes the other two paws
+            //well setting the blue paw
+        //x = 470, y = 200, color blue
+        paw_start_interface(470, 200, BLUE);
+        //the versus text
+        outtextxy(556, 215, "vs");
+        //here i set the green paw
+        //x = 600, 200, green
+        paw_start_interface(600, 200, GREEN);
+        //now inventing the mouse
+        //first get the rectangle coordinates
+        //choice 1 coordinates
+        //rectangle(120, 120, 345, 270);
+        //getting choice coordinates
+        //rectangle(422, 120, 650, 270);
+        //now stating the mouse conditions
+        if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 120 && mousey() >= 120 && mousex() <= 345 && mousey() <= 270)
+        {
+            choice = 1;
+        }
+        else if (ismouseclick(WM_LBUTTONDOWN) && mousex() >= 422 && mousey() >= 120 && mousex() <= 650 && mousey() <= 270)
+        {
+            choice = 2;
+        }
+        setlinestyle(0, 1, 2);
+        //setting color values for start and end values
+        setcolor(COLOR(0, 200, 255));
+        setbkcolor(RED);
+        settextstyle(1, 0, 1);
+        //making choice now
+        if (choice == 1)
+        {
+            rectangle(120, 120, 345, 270);
+            outtextxy(780, 370, "START");
+
+        }
+        else if (choice == 2)
+        {
+            rectangle(422, 120, 650, 270);
+            outtextxy(780, 370, "START");
+        }
+        //getting start button coordinates
+        //rectangle(680, 350, 780, 370);
+        //now set the mouse for it
+        if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 680 && mousey() >= 350 && mousex() <= 780 && mousey() <= 370)
+        {
+            if(choice == 1)
+                return 1;
+            else if (choice == 2)
+                return 2;
+        }
+        //making back button
+        outtextxy(100, 370, "Back");
+        //now makeing it mouse sensitive
+        //but first finding its coordinates
+        //rectangle(35, 350, 105, 370);
+        if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 35 && mousey() >= 350 && mousex() <= 105 && mousey() <= 370)
+        {
+            return 3;
+        }
+        //setting things to default
+        setbkcolor(BLACK);
+        clearmouseclick(WM_LBUTTONDOWN);
+        delay(75);
+        swapbuffers();
+    }
+
+}
+
+
+int player_win3()
+{
+    initwindow_800x400();
+    choice3_1= 0; int a=5;
+    choice3_2= 0;
+    choice3_3= 0;
+    choice3_4= 0;
+    clearmouseclick(WM_LBUTTONDOWN);
+    while(a)
+    {
+        cleardevice();
+        setcolor(COLOR(0, 200, 255));
+
+        setcolor(BLUE);
+        settextstyle(10, 4, 0);
+        outtextxy(650, 130, "Player 1 Select your choice!");
+        setcolor(WHITE);
+        //line(100,140,700,140);
+        //line(100,630,700,630);
+        rectangle(100,140,715,330);
+        setfillstyle(SOLID_FILL, RED);
+        fillellipse(180,240,65, 65);
+        setfillstyle(SOLID_FILL, YELLOW);
+        fillellipse(330,240,65, 65);
+        setfillstyle(SOLID_FILL, BLUE);
 #endif // MENU_OPTIONS_H_INCLUDED
