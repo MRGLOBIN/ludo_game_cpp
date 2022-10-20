@@ -339,4 +339,230 @@ int player_win3()
         setfillstyle(SOLID_FILL, YELLOW);
         fillellipse(330,240,65, 65);
         setfillstyle(SOLID_FILL, BLUE);
+        fillellipse(480,240,65, 65);
+        setfillstyle(SOLID_FILL, GREEN);
+        fillellipse(630,240,65, 65);
+        //Pan over red
+
+        if(mousex() >= 110 && mousey() >= 150 && mousex() <= 255 && mousey() <= 320)
+        {
+            setcolor(RED);
+            rectangle(110,150,255,320);
+        }
+        //pan over yellow
+
+        else if(mousex() >= 260 && mousey() >= 150 && mousex() <= 405 && mousey() <= 320)
+        {
+            setcolor(YELLOW);
+            rectangle(260,150,405,320);
+        }
+        //pan over green
+        else if(mousex() >= 410 && mousey() >= 150 && mousex() <= 555 && mousey() <= 320)
+        {
+            setcolor(BLUE);
+            rectangle(410,150,555,320);
+        }
+        //pan over green
+
+        else if(mousex() >= 560 && mousey() >= 150 && mousex() <= 705 && mousey() <= 320)
+        {
+            setcolor(GREEN);
+        	rectangle(560,150,705,320);
+        }
+        //clicks
+        //CLick over red
+
+        if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 110 && mousey() >= 150 && mousex() <= 255 && mousey() <= 320)
+			{
+			choice3_1= 1;
+            clearmouseclick(WM_LBUTTONDOWN); a=0;
+			}
+
+        //CLick over yellow
+
+        else if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 260 && mousey() >= 150 && mousex() <= 405 && mousey() <= 320)
+		{
+			choice3_1= 2;
+            clearmouseclick(WM_LBUTTONDOWN); a=0;
+		}
+
+        //CLick over green
+
+        else if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 410 && mousey() >= 150 && mousex() <= 555 && mousey() <= 320)
+        {
+			choice3_1= 3;
+            clearmouseclick(WM_LBUTTONDOWN); a=0;
+		}
+
+        //click over green
+
+        else if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 560 && mousey() >= 150 && mousex() <= 705 && mousey() <= 320)
+        {
+			choice3_1 = 4;
+            clearmouseclick(WM_LBUTTONDOWN);
+			a=0;
+		}
+            swapbuffers();
+    }
+    cleardevice();
+    closegraph();
+        initwindow(800, 400, "", screenx - 400, screeny - 200);
+
+        //player 2 choice
+        setbkcolor(BLACK);
+        char b;
+        clearmouseclick(WM_LBUTTONDOWN);
+        a=1;
+        while(a)
+    {
+        cleardevice();
+        setcolor(BLUE);
+        settextstyle(10, 4, 0);
+        outtextxy(650, 130, "Player 2 Select your choice!");
+        setcolor(WHITE);
+        rectangle(120,140,676,330);
+        circle(220,240,65);
+        circle(400,240,65);
+        circle(580,240,65);
+
+        if(choice3_1==1)
+        {
+            setfillstyle(SOLID_FILL, YELLOW);
+            floodfill(220,240,WHITE);
+            setfillstyle(SOLID_FILL, BLUE);
+            floodfill(400,240,WHITE);
+            setfillstyle(SOLID_FILL, GREEN);
+            floodfill(520,240,WHITE);
+
+            if(mousex() >= 120 && mousey() >= 150 && mousex() <= 350 && mousey() <= 320)
+        {
+            setcolor(YELLOW);
+            rectangle(145,155,295,315);
+        }
+        //pan over yellow
+
+        else if(mousex() >= 320 && mousey() >= 150 && mousex() <= 480 && mousey() <= 320)
+        {
+            setcolor(BLUE);
+            rectangle(320,155,480,315);
+        }
+        //pan over green
+        else if(mousex() >= 485 && mousey() >= 150 && mousex() <= 645 && mousey() <= 320)
+        {
+            setcolor(GREEN);
+            rectangle(495,155,665,315);
+        }
+        //pan over green
+        //clicks
+        //CLick over red
+
+        if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 120 && mousey() >= 150 && mousex() <= 350 && mousey() <= 320)
+			{
+			choice3_2= 1;
+            clearmouseclick(WM_LBUTTONDOWN); a=0;
+			}
+
+        //CLick over yellow
+
+        else if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 320 && mousey() >= 150 && mousex() <= 480 && mousey() <= 320)
+		{
+			choice3_2= 2;
+            clearmouseclick(WM_LBUTTONDOWN); a=0;
+		}
+
+        //CLick over green
+
+        else if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 485 && mousey() >= 150 && mousex() <= 645 && mousey() <= 320)
+        {
+			choice3_2= 3;
+            clearmouseclick(WM_LBUTTONDOWN); a=0;
+		}
+
+        //click over green
+
+
+
+        }
+        else if(choice3_1==2)
+        {
+            setfillstyle(SOLID_FILL, RED);
+            floodfill(220,240,WHITE);
+            setfillstyle(SOLID_FILL, BLUE);
+            floodfill(400,240,WHITE);
+            setfillstyle(SOLID_FILL, GREEN);
+            floodfill(520,240,WHITE);
+
+            if(mousex() >= 120 && mousey() >= 150 && mousex() <= 350 && mousey() <= 320)
+        {
+            setcolor(RED);
+            rectangle(145,155,295,315);
+        }
+        //pan over yellow
+
+        else if(mousex() >= 320 && mousey() >= 150 && mousex() <= 480 && mousey() <= 320)
+        {
+            setcolor(BLUE);
+            rectangle(320,155,480,315);
+        }
+        //pan over green
+        else if(mousex() >= 485 && mousey() >= 150 && mousex() <= 645 && mousey() <= 320)
+        {
+            setcolor(GREEN);
+            rectangle(495,155,665,315);
+        }
+        //pan over green
+        //clicks
+        //CLick over red
+
+        if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 120 && mousey() >= 150 && mousex() <= 350 && mousey() <= 320)
+			{
+			choice3_2= 1;
+            clearmouseclick(WM_LBUTTONDOWN); a=0;
+			}
+
+        //CLick over yellow
+
+        else if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 320 && mousey() >= 150 && mousex() <= 480 && mousey() <= 320)
+		{
+			choice3_2= 2;
+            clearmouseclick(WM_LBUTTONDOWN); a=0;
+		}
+
+        //CLick over green
+
+        else if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 485 && mousey() >= 150 && mousex() <= 645 && mousey() <= 320)
+        {
+			choice3_2= 3;
+            clearmouseclick(WM_LBUTTONDOWN); a=0;
+		}
+
+        //click over green
+
+
+
+        }
+        else if(choice3_1==3)
+        {
+            setfillstyle(SOLID_FILL, RED);
+            floodfill(220,240,WHITE);
+            setfillstyle(SOLID_FILL, YELLOW);
+            floodfill(400,240,WHITE);
+            setfillstyle(SOLID_FILL, GREEN);
+            floodfill(520,240,WHITE);
+
+            if(mousex() >= 120 && mousey() >= 150 && mousex() <= 350 && mousey() <= 320)
+        {
+            setcolor(RED);
+            rectangle(145,155,295,315);
+        }
+        //pan over yellow
+
+        else if(mousex() >= 320 && mousey() >= 150 && mousex() <= 480 && mousey() <= 320)
+        {
+            setcolor(YELLOW);
+            rectangle(320,155,480,315);
+        }
+        //pan over green
+        else if(mousex() >= 485 && mousey() >= 150 && mousex() <= 645 && mousey() <= 320)
+        {
 #endif // MENU_OPTIONS_H_INCLUDED
