@@ -565,4 +565,117 @@ int player_win3()
         //pan over green
         else if(mousex() >= 485 && mousey() >= 150 && mousex() <= 645 && mousey() <= 320)
         {
+            setcolor(GREEN);
+            rectangle(495,155,665,315);
+        }
+        //pan over green
+        //clicks
+        //CLick over red
+
+        if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 120 && mousey() >= 150 && mousex() <= 350 && mousey() <= 320)
+			{
+			choice3_2= 1;
+            clearmouseclick(WM_LBUTTONDOWN); a=0;
+			}
+
+        //CLick over yellow
+
+        else if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 320 && mousey() >= 150 && mousex() <= 480 && mousey() <= 320)
+		{
+			choice3_2= 2;
+            clearmouseclick(WM_LBUTTONDOWN); a=0;
+		}
+
+        //CLick over green
+
+        else if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 485 && mousey() >= 150 && mousex() <= 645 && mousey() <= 320)
+        {
+			choice3_2= 3;
+            clearmouseclick(WM_LBUTTONDOWN); a=0;
+		}
+
+        //click over green
+
+
+
+        }
+        else if(choice3_1==4)
+        {
+            setfillstyle(SOLID_FILL, RED);
+            floodfill(220,240,WHITE);
+            setfillstyle(SOLID_FILL, YELLOW);
+            floodfill(400,240,WHITE);
+            setfillstyle(SOLID_FILL, BLUE);
+            floodfill(520,240,WHITE);
+
+            if(mousex() >= 120 && mousey() >= 150 && mousex() <= 350 && mousey() <= 320)
+        {
+            setcolor(RED);
+            rectangle(145,155,295,315);
+        }
+        //pan over yellow
+
+        else if(mousex() >= 320 && mousey() >= 150 && mousex() <= 480 && mousey() <= 320)
+        {
+            setcolor(YELLOW);
+            rectangle(320,155,480,315);
+        }
+        //pan over green
+        else if(mousex() >= 485 && mousey() >= 150 && mousex() <= 645 && mousey() <= 320)
+        {
+            setcolor(BLUE);
+            rectangle(495,155,665,315);
+        }
+        //pan over green
+        //clicks
+        //CLick over red
+
+        if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 120 && mousey() >= 150 && mousex() <= 350 && mousey() <= 320)
+			{
+			choice3_2= 1;
+            clearmouseclick(WM_LBUTTONDOWN); a=0;
+			}
+
+        //CLick over yellow
+
+        else if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 320 && mousey() >= 150 && mousex() <= 480 && mousey() <= 320)
+		{
+			choice3_2= 2;
+            clearmouseclick(WM_LBUTTONDOWN); a=0;
+		}
+
+        //CLick over green
+
+        else if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 485 && mousey() >= 150 && mousex() <= 645 && mousey() <= 320)
+        {
+			choice3_2= 3;
+            clearmouseclick(WM_LBUTTONDOWN); a=0;
+		}
+
+        //click over green
+        }
+        //Pan over red
+
+        if(mousex() >= 120 && mousey() >= 150 && mousex() <= 350 && mousey() <= 320)
+        {
+            setcolor(RED);
+            rectangle(145,155,295,315);
+        }
+        //pan over yellow
+
+        else if(mousex() >= 320 && mousey() >= 150 && mousex() <= 480 && mousey() <= 320)
+        {
+            setcolor(YELLOW);
+            rectangle(320,155,480,315);
+        }
+        //pan over green
+        else if(mousex() >= 485 && mousey() >= 150 && mousex() <= 645 && mousey() <= 320)
+        {
+            setcolor(BLUE);
+            rectangle(495,155,665,315);
+        }
+        //pan over green
+        //clicks
+        //CLick over red
+
 #endif // MENU_OPTIONS_H_INCLUDED
