@@ -904,4 +904,117 @@ int player_win3()
 
         else if(mousex() >= 375 && mousey() >= 150 && mousex() <= 545 && mousey() <= 320)
         {
+            setcolor(BLUE);
+            rectangle(375,155,530,320);
+        }
+
+        if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 200 && mousey() >= 150 && mousex() <= 355 && mousey() <= 320)
+			{
+			choice3_3= 1;
+            clearmouseclick(WM_LBUTTONDOWN); a=0;
+			}
+
+        //CLick over yellow
+
+        else if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 375 && mousey() >= 150 && mousex() <= 545 && mousey() <= 320)
+		{
+			choice3_3= 2;
+            clearmouseclick(WM_LBUTTONDOWN); a=0;
+		}
+      }
+      else if(choice3_1==3 && choice3_2==1)
+      {
+          setfillstyle(SOLID_FILL, YELLOW);
+          floodfill(300,240,WHITE);
+          setfillstyle(SOLID_FILL, GREEN);
+          floodfill(450,240,WHITE);
+
+          if(mousex() >= 200 && mousey() >= 150 && mousex() <= 355 && mousey() <= 320)
+        {
+            setcolor(YELLOW);
+            rectangle(220,155,370,320);
+        }
+        //pan over yellow
+
+        else if(mousex() >= 375 && mousey() >= 150 && mousex() <= 545 && mousey() <= 320)
+        {
+            setcolor(GREEN);
+            rectangle(375,155,530,320);
+        }
+
+        if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 200 && mousey() >= 150 && mousex() <= 355 && mousey() <= 320)
+			{
+			choice3_3= 1;
+            clearmouseclick(WM_LBUTTONDOWN); a=0;
+			}
+
+        //CLick over yellow
+
+        else if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 375 && mousey() >= 150 && mousex() <= 545 && mousey() <= 320)
+		{
+			choice3_3= 2;
+            clearmouseclick(WM_LBUTTONDOWN); a=0;
+		}
+      }
+      else if(choice3_1==3 && choice3_2==2)
+      {
+          setfillstyle(SOLID_FILL, RED);
+          floodfill(300,240,WHITE);
+          setfillstyle(SOLID_FILL, GREEN);
+          floodfill(450,240,WHITE);
+
+          if(mousex() >= 200 && mousey() >= 150 && mousex() <= 355 && mousey() <= 320)
+        {
+            setcolor(RED);
+            rectangle(220,155,370,320);
+        }
+        //pan over yellow
+
+        else if(mousex() >= 375 && mousey() >= 150 && mousex() <= 545 && mousey() <= 320)
+        {
+            setcolor(GREEN);
+            rectangle(375,155,530,320);
+        }
+
+        if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 200 && mousey() >= 150 && mousex() <= 355 && mousey() <= 320)
+			{
+			choice3_3= 1;
+            clearmouseclick(WM_LBUTTONDOWN); a=0;
+			}
+
+        //CLick over yellow
+
+        else if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 375 && mousey() >= 150 && mousex() <= 545 && mousey() <= 320)
+		{
+			choice3_3= 2;
+            clearmouseclick(WM_LBUTTONDOWN); a=0;
+		}
+
+      }
+      else if(choice3_1==3 && choice3_2==3)
+      {
+          setfillstyle(SOLID_FILL, RED);
+          floodfill(300,240,WHITE);
+          setfillstyle(SOLID_FILL, YELLOW);
+          floodfill(450,240,WHITE);
+
+          if(mousex() >= 200 && mousey() >= 150 && mousex() <= 355 && mousey() <= 320)
+        {
+            setcolor(RED);
+            rectangle(220,155,370,320);
+        }
+        //pan over yellow
+
+        else if(mousex() >= 375 && mousey() >= 150 && mousex() <= 545 && mousey() <= 320)
+        {
+            setcolor(YELLOW);
+            rectangle(375,155,530,320);
+        }
+
+        if(ismouseclick(WM_LBUTTONDOWN) && mousex() >= 200 && mousey() >= 150 && mousex() <= 355 && mousey() <= 320)
+			{
+			choice3_3= 1;
+            clearmouseclick(WM_LBUTTONDOWN); a=0;
+			}
+
 #endif // MENU_OPTIONS_H_INCLUDED
