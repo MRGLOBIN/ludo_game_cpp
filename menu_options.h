@@ -1130,4 +1130,9 @@ int player_win3()
       }
         //Pan over red
         swapbuffers();
+    }
+    closegraph();
+}
+
+
 #endif // MENU_OPTIONS_H_INCLUDED
