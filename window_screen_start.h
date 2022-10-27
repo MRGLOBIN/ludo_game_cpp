@@ -60,4 +60,34 @@ void delevlopers_info()
       readimagefile("sir.jpeg", 80, 100, 250, 290);
       setcolor(YELLOW);
       settextstyle(9,0,3);
+      delay(500); outtextxy(340,90," \"Supervisor\" ");delay(500);setcolor(LIGHTGREEN); outtextxy(270,150,"Institution :");
+      outtextxy(270,210,"Designation :");  outtextxy(270,270,"Department :");
+      settextstyle(8,0,3);
+      setcolor(LIGHTMAGENTA); delay(500);
+      outtextxy(430,180,"Air University");
+      outtextxy(430,240,"Assistant Professor"); outtextxy(430,290,"Creative Technologies");
+      setcolor(WHITE);
+      settextstyle(EUROPEAN_FONT,0,2);
+      outtextxy(205,365,"Press any key to continue...");
+      getch();
+      ///////end///////////
+
+      /////second member information////////
+      delay(600);
+
+      cleardevice();
+      setcolor(LIGHTCYAN);
+      settextstyle(EUROPEAN_FONT,0,4);
+      for(int i=180;i>=20;i-=5)
+      {
+      cleardevice();
+      outtextxy(200,i,"Muhammed Asim");
+      rectangle(160,i,600,i+40);
+      delay(20);
+      }
+      settextstyle(EUROPEAN_FONT,0,2);
+      delay(500);
+      setcolor(LIGHTBLUE);
+      readimagefile(".jpeg", 80, 100, 250, 290);
+      setcolor(YELLOW);
 #endif // WINDOW_SCREEN_START_H_INCLUDED
