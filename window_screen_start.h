@@ -90,4 +90,64 @@ void delevlopers_info()
       setcolor(LIGHTBLUE);
       readimagefile(".jpeg", 80, 100, 250, 290);
       setcolor(YELLOW);
+      settextstyle(9,0,3); delay(500);
+      outtextxy(300,90,"\"PROJECT ARCHITECT\""); setcolor(LIGHTGREEN);outtextxy(270,150,"Institution :");
+      outtextxy(270,210,"CT Department:"); outtextxy(270,270,"Program :");
+      settextstyle(8,0,3);
+      setcolor(LIGHTMAGENTA); delay(500);
+      outtextxy(430,180,"Air University");
+      outtextxy(430,240,"Fisrt semester Student"); outtextxy(430,290,"BS Software Engineering");
+      setcolor(WHITE);
+      settextstyle(EUROPEAN_FONT,0,2);
+      outtextxy(205,365,"Press any key to continue...");
+      getch();
+      //////////end/////////
+
+      //////Third Person Information//////////////
+      delay(600);
+      cleardevice();
+      setcolor(LIGHTCYAN);
+      settextstyle(EUROPEAN_FONT,0,4);
+      for(int i=180;i>=20;i-=5)
+      {
+      cleardevice();
+      outtextxy(200,i,"Muhammad Ahmed");
+      rectangle(160,i,650,i+40);
+      delay(20);
+      }
+      settextstyle(EUROPEAN_FONT,0,2);
+      delay(500);
+      setcolor(LIGHTBLUE);
+      rectangle(80,100,250,290);
+      readimagefile("ahmed.jpeg", 80, 100, 250, 290);
+      setcolor(YELLOW);
+      settextstyle(9,0,3); delay(500);
+      outtextxy(270,90,"\"PROJECT VISUAL MANAGER\"");setcolor(LIGHTGREEN);  outtextxy(270,150,"Institution :");
+      outtextxy(270,210,"CT Department :"); outtextxy(270,270,"Program :");
+      settextstyle(8,0,3);
+      setcolor(LIGHTMAGENTA);
+      delay(500);outtextxy(430,180,"Air University");
+      outtextxy(430,240,"Fisrt semester Student"); outtextxy(430,290,"BS Software Engineering");
+      setcolor(WHITE);
+      settextstyle(EUROPEAN_FONT,0,2);
+      outtextxy(205,365,"Press any key to continue...");
+      getch();
+
+      //////Fourth Person Information//////////////
+      delay(600);
+      cleardevice();
+      setcolor(LIGHTCYAN);
+      settextstyle(EUROPEAN_FONT,0,4);
+      for(int i=180;i>=20;i-=5)
+      {
+      cleardevice();
+      outtextxy(200,i,"Syed Shayan ALi Shah");
+      rectangle(160,i,650,i+40);
+      delay(20);
+      }
+      settextstyle(EUROPEAN_FONT,0,2);
+      delay(500);
+      setcolor(LIGHTBLUE);
+      readimagefile("shayan.jpeg", 80, 100, 250, 290);
+      setcolor(YELLOW);
 #endif // WINDOW_SCREEN_START_H_INCLUDED
