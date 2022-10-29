@@ -150,4 +150,34 @@ void delevlopers_info()
       setcolor(LIGHTBLUE);
       readimagefile("shayan.jpeg", 80, 100, 250, 290);
       setcolor(YELLOW);
+      settextstyle(9,0,3); delay(500);
+      outtextxy(270,90,"\"PROJECT LOGIC MANAGER\""); setcolor(LIGHTGREEN); outtextxy(270,150,"Institution :");
+      outtextxy(270,210,"CT Department:"); outtextxy(270,270,"Program :");
+      settextstyle(8,0,3);
+      setcolor(LIGHTMAGENTA);
+      outtextxy(430,180,"Air University");
+      outtextxy(430,240,"Fisrt semester Student"); outtextxy(430,290,"BS Software Engineering");
+      setcolor(WHITE);
+      settextstyle(EUROPEAN_FONT,0,2);
+      outtextxy(205,365,"Press any key to continue...");
+      getch();
+      closegraph(CURRENT_WINDOW);
+}
+
+
+void how_play()
+{
+    int page1=0;
+    int screenx1 = GetSystemMetrics(SM_CXSCREEN) / 2,
+    screeny2 = GetSystemMetrics(SM_CYSCREEN) / 2,
+    i=0, j=0;
+    initwindow(1200, 600, "How To Play", screenx1 - 600, screeny2 - 300);
+    line(595, 65, 595, 410);
+    line(605, 65, 605, 410);
+    line(0, 410, 595, 410);
+    line(605, 410, 1200, 410);
+    setcolor(YELLOW);
+    //How to Play Heading
+    settextstyle(6,0,3);
+    outtextxy(120,65, "How to Play");
 #endif // WINDOW_SCREEN_START_H_INCLUDED
