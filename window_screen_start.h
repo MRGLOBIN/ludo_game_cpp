@@ -180,4 +180,34 @@ void how_play()
     //How to Play Heading
     settextstyle(6,0,3);
     outtextxy(120,65, "How to Play");
+    line(120, 100, 200, 100);
+    outtextxy(800,65, "Rules");
+    //Content of how to play
+    settextstyle(8,0,1);
+    outtextxy(40, 120, "-> First Choose The mode you would like to play");
+    outtextxy(40, 140, "   on the main menu");
+    outtextxy(40, 160, "-> You can choose from 2 players,3 Players, 4 ");
+    outtextxy(40, 180, "   Players modes");
+    outtextxy(40, 200, "-> If you choose 2 Player or 3 Players mode, you");
+    outtextxy(40, 220, "   will be asked to chose which colors you want");
+    outtextxy(40, 240, "   to choose and then press start");
+    outtextxy(40, 260, "-> If you choose 4 Players the game will start ");
+    outtextxy(40, 280, "   automatically ");
+    outtextxy(40, 300, "-> The current turn will be displayed in top left");
+    outtextxy(40, 320, "   checkbox");
+    outtextxy(610, 120, "-> Players take turns in a clockwise order Each ");
+    outtextxy(610, 140, "   throw, the player decides which piece to move.");
+    outtextxy(610, 160, "-> A piece simply moves in a clockwise direction ");
+    outtextxy(610, 180, "   around the track given by the number thrown.");
+    outtextxy(610, 200, "-> If no piece can legally move according to the ");
+    outtextxy(610, 220, "   number thrown, play passes to the next player.");
+    outtextxy(610, 240, "-> A score of 6 is needed to release a pawn from");
+    outtextxy(610, 260, "   the starting area.");
+    outtextxy(610, 280, "-> If a pawn lands on a square occupied by a ");
+    outtextxy(610, 300, "   different colour pawn,the pawn gets eliminated");
+    outtextxy(610, 320, "   and is hauled back into its home area.");
+    outtextxy(610, 340, "-> A pawn enters the home zone when it completes ");
+    outtextxy(610, 360, "   its entire track, i.e. from the starting point");
+    outtextxy(610, 380, "   to its respective coloured home area");
+    settextstyle(6,0,5);
 #endif // WINDOW_SCREEN_START_H_INCLUDED
