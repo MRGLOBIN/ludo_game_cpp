@@ -210,4 +210,64 @@ void how_play()
     outtextxy(610, 360, "   its entire track, i.e. from the starting point");
     outtextxy(610, 380, "   to its respective coloured home area");
     settextstyle(6,0,5);
+    outtextxy(250, 440, "Press any key to Continue...");
+    outtextxy(610, 420, "");
+    getch();
+    closegraph(CURRENT_WINDOW);
+}
+
+
+void loadingscreen()
+{
+    initwindow(1200, 720, "", screenx - 600, screeny - 380);
+    int a = 1;
+    for(int i = 0; i <= 360*3; i += 15)
+    {
+        swapbuffers();
+        cleardevice();
+        setlinestyle(SOLID_LINE, 0, 5);
+        setcolor(COLOR(255, 186, 0));
+        arc(407, 424, i, 300+i, 94);
+        setcolor(COLOR(242, 0, 0));
+        setlinestyle(DASHED_LINE, 0, 3);
+        arc(407, 424, 5+i, 230+i, 83);
+        setcolor(COLOR(158, 0, 59));
+        arc(407, 424, i+5, 320+i, 52);
+        setcolor(COLOR(243, 266, 255));
+        setlinestyle(USERBIT_LINE, 0, 2);
+        arc(407, 424, 200-i, 300+i, 78);
+        setcolor(COLOR(57 , 181, 74));
+        arc(407, 424, 200-i, 300+i, 45);
+        setcolor(COLOR(189, 171, 255));
+        setlinestyle(SOLID_LINE, 0, 1);
+        arc(407, 424, 250-i, 300+i, 61);
+        setcolor(COLOR(6, 135, 255));
+        arc(407, 424, 150-i, 360-i, 38);
+        setlinestyle(SOLID_LINE, 0, 3);
+        setcolor(COLOR(0, 29, 38));
+        line(509, 435, 915, 435);
+        setcolor(COLOR(0, 118, 171));
+        arc(407, 424, 354, 284, 103);
+        line(433, 523, 442, 552);
+        line(509, 435, 630+a, 435);
+        setlinestyle(USERBIT_LINE,0, 13);
+        setcolor(COLOR(0, 29, 38));
+        arc(407, 424, 8, 285, 116);
+        setcolor(COLOR(0 ,200, 255));
+        arc(407, 424, 0, a, 116);
+        a += 4;
+        if(i % 8 == 0)
+        {
+            setcolor(COLOR(236, 28, 28));
+        }
+        else if(i % 8 == 1)
+        {
+            setcolor(COLOR(255, 63, 63));
+        }
+        else if(i % 8 == 2)
+        {
+            setcolor(COLOR(255, 0, 0));
+        }
+        else if(i % 8 == 4)
+        {
 #endif // WINDOW_SCREEN_START_H_INCLUDED
