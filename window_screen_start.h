@@ -270,4 +270,34 @@ void loadingscreen()
         }
         else if(i % 8 == 4)
         {
+            setcolor(COLOR(211, 7, 7));
+        }
+        else if(i % 8 == 5)
+        {
+            setcolor(COLOR(178, 0, 0));
+        }
+        else if(i % 8 == 6)
+        {
+            setcolor(COLOR(145, 0, 0));
+        }
+        else if(i % 8 == 7)
+        {
+            setcolor(COLOR(105, 28, 28));
+        }
+        settextstyle(8, 0, 3);
+        outtextxy(567, 408, "LOADING, PLEASE WAIT!");
+        setcolor(COLOR(0, 229, 32));
+        settextstyle(8, 0, 6);
+        outtextxy(391, 398, "G");
+        PlaySound(TEXT("dice.wav"), NULL, SND_ASYNC);
+        delay(50);
+    }
+    closegraph();
+}
+
+void paw_start_interface(int x, int y,int color)
+{
+        setlinestyle(SOLID_LINE, 1, 1);
+        setcolor(color);
+        setfillstyle(SOLID_FILL, color);
 #endif // WINDOW_SCREEN_START_H_INCLUDED
