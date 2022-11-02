@@ -300,4 +300,13 @@ void paw_start_interface(int x, int y,int color)
         setlinestyle(SOLID_LINE, 1, 1);
         setcolor(color);
         setfillstyle(SOLID_FILL, color);
+        fillellipse(x, y, 30, 30);
+        setcolor(DARKGRAY);
+        circle(x, y, 10);
+        circle(x, y, 20);
+        circle(x, y, 30);
+}
+
+
+
 #endif // WINDOW_SCREEN_START_H_INCLUDED
