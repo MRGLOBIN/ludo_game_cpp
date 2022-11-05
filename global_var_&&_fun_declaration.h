@@ -20,4 +20,20 @@ bool win = true;
 
 //for functions
 
+void loadingscreen();
+void red();
+void green();
+void blue();
+void yellow();
+void dice(int check);
+void flagpasser();
+void game_structure();
+void redraw();
+void safezone(int x, int y);
+void checkbox(int turn);
+void bite_test(char paw_val);
+int bite(int bite, int turn);
+void check_winner_result(char runner);
+
+
 #endif // GLOBAL_VAR_&&_FUN_DECLARATION_H_INCLUDED
