@@ -10,4 +10,14 @@ void start_game()
     PlaySound(0, 0, 0);
     PlaySound("dota.wav", NULL, SND_LOOP | SND_ASYNC);
     while(win)
+    {
+        game_structure();
+        redraw();
+        if(redflag == 1)
+        {
+            red();
+        }
+        else if(greenflag == 1)
+        {
+            green();
 #endif // GAME_STARTS_H_INCLUDED
