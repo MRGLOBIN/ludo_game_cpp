@@ -20,4 +20,18 @@ void start_game()
         else if(greenflag == 1)
         {
             green();
+        }
+        else if(yellowflag == 1)
+        {
+            yellow();
+        }
+        else if(blueflag == 1)
+        {
+            blue();
+        }
+    }
+
+}
+
+
 #endif // GAME_STARTS_H_INCLUDED
