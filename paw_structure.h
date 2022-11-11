@@ -108,4 +108,112 @@ struct redcolorpawn
       }
       else if (dice_number == 27)
       {
+          x = 683, y = 315;
+      }
+      else if (dice_number == 28)
+      {
+          x = 736, y = 315;
+      }
+      else if (dice_number == 29)
+      {
+          x = 789, y = 315;
+      }
+      else if (dice_number == 30)
+      {
+          x = 789, y = 360;
+      }
+      else if (dice_number == 31)
+      {
+          x = 789, y = 405;
+      }
+      else if (dice_number == 32)
+      {
+          x = 736, y = 405;
+      }
+      else if (dice_number == 33)
+      {
+          x = 683, y = 405;
+      }
+      else if (dice_number == 34)
+      {
+          x = 630, y = 405;
+      }
+      else if (dice_number == 35)
+      {
+          x = 577, y = 405;
+      }
+      else if (dice_number == 36)
+      {
+          x = 524, y = 405;
+      }
+      else if (dice_number == 37)
+      {
+          x = 471, y = 450;
+      }
+      else if (dice_number == 38)
+      {
+          x = 471, y = 495;
+      }
+      else if (dice_number == 39)
+      {
+          x = 471, y = 540;
+      }
+      else if (dice_number == 40)
+      {
+          x = 471, y = 585;
+      }
+      else if (dice_number == 41)
+      {
+          x = 471, y = 630;
+      }
+      else if (dice_number == 42)
+      {
+          x = 471, y = 675;
+      }
+      else if (dice_number == 43)
+      {
+          x = 418, y = 675;
+      }
+      else if (dice_number == 44)
+      {
+          x = 365, y = 675;
+      }
+      else if (dice_number == 45)
+      {
+          x = 365, y = 630;
+      }
+      else if (dice_number == 46)
+      {
+          x = 365, y = 585;
+      }
+      else if (dice_number == 47)
+      {
+          x = 365, y = 540;
+      }
+      else if (dice_number == 48)
+      {
+          x = 365, y = 495;
+      }
+      else if (dice_number == 49)
+      {
+          x = 365, y = 450;
+      }
+      else if (dice_number == 50)
+      {
+          x = 312, y = 405;
+      }
+      else if (dice_number == 51)
+      {
+          x = 259, y = 405;
+      }
+      else if (dice_number == 52)
+      {
+          x = 206, y = 405;
+      }
+      else if (dice_number == 53)
+      {
+          x = 153, y = 405;
+      }
+      else if (dice_number == 54)
+      {
 #endif // PAW_STRUCTURE_H_INCLUDED
