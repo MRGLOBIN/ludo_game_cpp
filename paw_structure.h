@@ -972,4 +972,112 @@ struct bluecolorpaw
           x = 630, y = 315;
       }
       else if (dice_number == 40)
+      {
+          x = 683, y = 315;
+      }
+      else if (dice_number == 41)
+      {
+          x = 736, y = 315;
+      }
+      else if (dice_number == 42)
+      {
+          x = 789, y = 315;
+      }
+      else if (dice_number == 43)
+      {
+          x = 789, y = 360;
+      }
+      else if (dice_number == 44)
+      {
+          x = 789, y = 405;
+      }
+      else if (dice_number == 45)
+      {
+          x = 736, y = 405;
+      }
+      else if (dice_number == 46)
+      {
+          x = 683, y = 405;
+      }
+      else if (dice_number == 47)
+      {
+          x = 630, y = 405;
+      }
+      else if (dice_number == 48)
+      {
+          x = 577, y = 405;
+      }
+      else if (dice_number == 49)
+      {
+          x = 524, y = 405;
+      }
+      else if (dice_number == 50)
+      {
+          x = 471, y = 450;
+      }
+      else if (dice_number == 51)
+      {
+          x = 471, y = 495;
+      }
+      else if (dice_number == 52)
+      {
+          x = 471, y = 540;
+      }
+      else if (dice_number == 53)
+      {
+          x = 471, y = 585;
+      }
+      else if (dice_number == 54)
+      {
+          x = 471, y = 630;
+      }
+      else if (dice_number == 55)
+      {
+          x = 417, y = 675;
+      }
+      else if (dice_number == 56)
+      {
+          x = 418, y = 675;
+      }
+      else if (dice_number == 57)
+      {
+          x = 418, y = 630;
+      }
+      else if (dice_number == 58)
+      {
+          x = 418, y = 585;
+      }
+      else if (dice_number == 59)
+      {
+          x = 418, y = 540;
+      }
+      else if (dice_number == 60)
+      {
+          x = 418, y = 495;
+      }
+      else if (dice_number == 61)
+      {
+          x = 418, y = 450;
+      }
+      else if (dice_number == 62 && paw_no == 1)
+      {
+          x = 418, y = 405;
+      }
+      else if (dice_number == 62 && paw_no == 2)
+      {
+          x = 418, y = 405;
+      }
+      else if (dice_number == 62 && paw_no == 3)
+      {
+          x = 418, y = 405;
+      }
+      else if (dice_number == 62 && paw_no == 4)
+      {
+          x = 418, y = 405;
+      }
+      setcolor(BLACK);
+      setfillstyle(SOLID_FILL, BLUE);
+      fillellipse(x, y, 18, 18);
+      setcolor(12);
+      circle(x, y, 15);
 #endif // PAW_STRUCTURE_H_INCLUDED
