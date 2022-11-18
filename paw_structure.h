@@ -1080,4 +1080,11 @@ struct bluecolorpaw
       fillellipse(x, y, 18, 18);
       setcolor(12);
       circle(x, y, 15);
+      circle(x, y, 10);
+
+  }
+};
+
+
+
 #endif // PAW_STRUCTURE_H_INCLUDED
