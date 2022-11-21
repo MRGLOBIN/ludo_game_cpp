@@ -28,3 +28,23 @@ int main()
         {
             redflag = 1;
             start_game();
+        }
+        else if (ret_choice_2 == 2)
+        {
+            greenflag = 1;
+            start_game();
+        }
+        else if (ret_choice_2 == 3)
+        {
+            closegraph();
+            initwindow_800x400();
+            goto back_button;
+        }
+    }
+    else if (player_mod == 3)
+    {
+        ret_choice_3 = player_win3();
+        if(choice3_4 == 0 || choice3_2 == 0 || choice3_3 == 0)
+        {
+            //means no blue flag
+            redflag = 1;
