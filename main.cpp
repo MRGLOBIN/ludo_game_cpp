@@ -48,3 +48,13 @@ int main()
         {
             //means no blue flag
             redflag = 1;
+            start_game();
+        }
+        else if (ret_choice_3 == 2)
+        {
+            //this is for exit button
+            closegraph();
+            goto back_button;
+        }
+        else if (choice3_1 == 0)
+        {
