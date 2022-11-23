@@ -58,3 +58,13 @@ int main()
         }
         else if (choice3_1 == 0)
         {
+            //means no redflag
+            greenflag = 1;
+            start_game();
+        }
+    }
+    else if (player_mod == 4)
+    {
+        redflag = 1;
+        start_game();
+    }
