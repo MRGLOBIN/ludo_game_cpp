@@ -68,3 +68,23 @@ int main()
         redflag = 1;
         start_game();
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
