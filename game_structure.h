@@ -2446,5 +2446,3 @@ void check_winner_result(char runner)
 #endif // GAME_STRUCTURE_H_INCLUDED
 
 
-
-#endif // added by script
