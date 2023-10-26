@@ -1,0 +1,5 @@
+// using clang++
+clang++ main.cpp -std=c++20 -o ../bin/game
+
+// using g++
+g++ main.cpp -std=c++20 -o ../bin/game
