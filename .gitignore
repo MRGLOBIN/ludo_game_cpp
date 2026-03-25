@@ -1,0 +1,5 @@
+MinGW-compiler.zip
+bin/
+obj/
+*.depend
+*.layout

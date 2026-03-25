@@ -14,11 +14,13 @@ This is a **Windows-only** graphical application because it relies on the Window
 - **Library:** WinBGIm (must be configured with your MinGW / Code::Blocks installation)
 
 ## 🚀 How to Build and Run
-1. Ensure that you have Code::Blocks installed with the MinGW compiler.
-2. Ensure you have properly configured the `graphics.h` (WinBGIm) library within your IDE settings.
+**Important:** This project uses a custom, modified version of the `graphics.h` (WinBGIm) library that supports extended 256-bit colors (upgraded from the original 8-bit colors).
+
+1. Download the `MinGW-compiler.zip` folder from the **Releases** section of this GitHub repository and extract it to a memorable location. This zip contains the pre-configured MinGW compiler with the enhanced `graphics.h` already installed.
+2. Set up Code::Blocks to use this specific extracted MinGW compiler in your toolchain executables settings.
 3. Open the `learn.cbp` project file using Code::Blocks.
 4. Hit **Build and Run** (or press F9).
-5. The game window will launch right away!
+5. The game window will launch right away with rich colors!
 
 ## 🎲 How to Play
 - **Main Menu**: First, choose the mode you would like to play (2 Players, 3 Players, or 4 Players).
@@ -36,3 +38,6 @@ This project was conceptualized, designed, and developed by:
 - **Muhammad Asim** - Project Architect
 - **Muhammad Ahmed** - Project Visual Manager
 - **Syed Shayan Ali Shah** - Project Logic Manager
+
+## 📚 Resources & Documentation
+- **WinBGIm (`graphics.h`) API Reference**: [https://winbgim.codecutter.org/V6_0/doc/](https://winbgim.codecutter.org/V6_0/doc/)
